@@ -1,5 +1,7 @@
 package EntrustEnergy;
 
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
 import java.util.concurrent.TimeUnit;
 
 import org.testng.Assert;
@@ -29,7 +31,7 @@ static String verifyResult = "10400511129030001";
 		driver.manage().timeouts().pageLoadTimeout(15, TimeUnit.SECONDS);
 		String Esid = driver.findElement(By.xpath(".//*[@id='page-content']/div/div[1]/div/table/tbody/tr/td[8]")).getText();
 		Thread.sleep(8000);
-		Assert.assertEquals(verifyResult, Esid);
+		AssertJUnit.assertEquals(verifyResult, Esid);
 		Thread.sleep(4000);
 		}
 	//Below test will click on the view 
@@ -40,7 +42,7 @@ static String verifyResult = "10400511129030001";
 		driver.findElement(By.xpath(".//*[@id='page-content']/div/div[1]/div/table/tbody/tr[1]/td[12]/div/a[1]")).click();
 		Thread.sleep(8000);
 		String PassText = driver.findElement(By.xpath(".//*[@id='page-content']/div/div[1]/h3")).getText();
-		Assert.assertEquals("Enrollment", PassText);
+		AssertJUnit.assertEquals("Enrollment", PassText);
 		driver.findElement(By.xpath(".//*[@id='page-content']/div/div[1]/div[1]/a")).click();
 		driver.findElement(By.xpath(".//*[@id='reset']")).click();
 		}

@@ -1,8 +1,9 @@
 package EntrustEnergy;
  
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
 import java.util.concurrent.TimeUnit;
 
-import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
@@ -32,7 +33,7 @@ public class AddNewPartner extends login {
 	public void clickBack() throws Exception{
 		driver.findElement(By.xpath(".//*[@id='page-content']/div/div/a")).click();
 		String actualResult = driver.getCurrentUrl();
-		Assert.assertEquals(actualResult,"http://aimstaging.entrustenergy.com/standard/users/vendors_index");
+		AssertJUnit.assertEquals(actualResult,"http://aimstaging.entrustenergy.com/standard/users/vendors_index");
 	}
 	
 	@Test(dependsOnMethods={"newPartner"}, enabled=false) // This method will fill the form 
