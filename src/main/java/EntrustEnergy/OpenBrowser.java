@@ -4,8 +4,10 @@ package EntrustEnergy;
 
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 
@@ -25,4 +27,9 @@ public class OpenBrowser {
 	public void closeBrowser() throws Exception { 
 		driver.quit();
 	}
+	@AfterClass
+	public static void logout() throws Exception{
+		driver.findElement(By.cssSelector(".sidebar-nav>li>a")).click();
+	}
+
 }

@@ -26,9 +26,5 @@ public class login extends EntrustEnergy.OpenBrowser  {
 		System.out.println("3rd line from Raees");
 		
 	}
-	@AfterTest
-	public static void logout() throws Exception{
-		driver.findElement(By.cssSelector(".sidebar-nav>li>a")).click();
-	}
-
+	
 }

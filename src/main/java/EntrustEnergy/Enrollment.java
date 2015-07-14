@@ -10,7 +10,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-public class Enrollment extends EntrustEnergy.login{
+public class Enrollment extends login{
 static String reference ="1277" ;
 static String verifyResult = "10400511129030001";
 	//below test will navigate to the Enrollment page 
@@ -49,8 +49,8 @@ static String verifyResult = "10400511129030001";
 	//below test case click on the edit form 
 	@Test(priority=4)
 	public void editEnrollment() throws Exception{
-		reference = "1278";
-		verifyResult = "1008901016780365490100";
+		reference = "1280";
+		verifyResult = "10443720003044492";
 		Enrollment.searchByReference();		
 		String status = driver.findElement(By.xpath(".//*[@id='page-content']/div/div[1]/div/table/tbody/tr[1]/td[4]")).getText();
 		System.out.println(status);
@@ -88,7 +88,7 @@ static String verifyResult = "10400511129030001";
 		callDepo.selectByValue(callDepoV);
 		Select NoSal = new Select(driver.findElement(By.xpath(Nosalpath)));
 		NoSal.selectByValue(nosal);
-		driver.findElement(By.xpath(submit)).click();
+		//driver.findElement(By.xpath(submit)).click();
 
 
 	}
