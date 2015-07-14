@@ -10,7 +10,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-public class Enrollment extends login{
+public class Enrollment extends OpenBrowser{
 static String reference ="1277" ;
 static String verifyResult = "10400511129030001";
 	//below test will navigate to the Enrollment page 
