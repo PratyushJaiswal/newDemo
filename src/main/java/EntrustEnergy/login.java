@@ -1,13 +1,11 @@
 package EntrustEnergy;
 
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 import org.testng.AssertJUnit;
 
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
-import org.testng.annotations.Test;
 
 public class login extends EntrustEnergy.OpenBrowser  {
 	

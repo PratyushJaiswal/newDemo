@@ -4,7 +4,6 @@ import org.testng.annotations.Test;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
-import org.testng.annotations.Test;
 
 public class editFormNormal extends OpenBrowser{
 	@Test(priority=1)
@@ -20,7 +19,7 @@ public class editFormNormal extends OpenBrowser{
 		driver.findElement(By.xpath(".//*[@id='page-content']/div/div[1]/div/table/tbody/tr[1]/td[12]/div/a[2]")).click();
 		driver.findElement(By.xpath(path)).clear();
 		driver.findElement(By.xpath(path)).sendKeys("praty");
-
+		driver.navigate().refresh();
 	}
 
 }

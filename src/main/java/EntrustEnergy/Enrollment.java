@@ -4,11 +4,9 @@ import org.testng.annotations.Test;
 import org.testng.AssertJUnit;
 import java.util.concurrent.TimeUnit;
 
-import org.testng.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.DataProvider;
-import org.testng.annotations.Test;
 
 public class Enrollment extends OpenBrowser{
 static String reference ="1277" ;
